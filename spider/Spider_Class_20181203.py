@@ -26,7 +26,7 @@ class Spider(object):
         alt_list = html.xpath('//div[@class="pic"]/ul/li/a/img/@alt')
         if not os.path.exists(r"D:/tmp/2/"):
             os.makedirs(r"D:/tmp/2/")
-        for src, alt in zip(src_list, alt_list):    # zip
+        for src, alt in zip(src_list, alt_list):    # zip的学习
             response = requests.get(src, headers=self.headers)
             file_name = "D:/tmp/2/" + alt + ".jpg"
             print("正在抓取" + file_name)
